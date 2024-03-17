@@ -1,0 +1,83 @@
+/*styles.css*/
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@keyframes fade-image{
+   from{filter: grayscale(100%) brightness(0);}
+   to{filter: grayscale(0%) brightness(100%);}
+}
+.photo-silhouette {
+    filter: grayscale(100%) brightness(0);
+}
+.fade-image{
+    animation-name: fade-image;
+    animation-duration: .75s;
+    animation-fill-mode: forwards; /* Keep the final state after animation */
+}
+#headshot
+{
+    margin-top: 17%;
+    max-width: 400px;
+    max-height: 400px;
+    margin-bottom: 10px;
+}
+
+.light-section
+{
+    background-color: #F8F9FA;
+    width: 100vw;
+    color: #212529;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.dark-section {
+    background-color: #97caef;
+    width: 100vw;
+    color: #212529;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+@keyframes swipe {
+    from {
+        transform: translateX(0); /* Initial position */
+    }
+    to {
+        transform: translateX(70vw); /* Move off the screen */
+    }
+}
+
+@keyframes swipe-center {
+    from {
+        transform: translateX(0); /* Initial position - Center of the screen */
+    }
+    to {
+        transform: translateX(calc(50vw - 52%)); /* Final position - Center of the screen */
+    }
+}
+
+#name {
+    position: absolute; /* Ensure the element stays positioned */
+    top: 40%; /* Initial vertical position */
+}
+
+#info{
+    position: absolute; /* Ensure the element stays positioned */
+    top: 50%; /* Initial vertical position */
+    animation-duration: 2s;
+    
+}
+
+.swipe{
+    animation-name: swipe;
+    animation-duration: 3s;
+    animation-fill-mode: forwards; /* Keep the final state after animation */
+}
+.swipe-center{
+    position: absolute; /* Ensure the element stays positioned */
+    animation-name: swipe-center;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards; /* Keep the final state after animation */
+}
