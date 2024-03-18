@@ -13,8 +13,8 @@
         <!-- Custin JS-->
         <script src="index.js">index.js</script>
     </head>
-    <body class = "light-section container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-left: -2%; margin-right: -2%; border-radius: 6px; box-shadow: 0 4px 2px -2px gray;">
+    <body class = "light-section container-fluid" style = " padding-top: 0px; padding-bottom: 0%;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-left: -2%; margin-right: -2%; border-radius: 6px; box-shadow: 0 4px 2px -2px gray; padding-right: 2%;">
             <div class="container-fluid">
                 <img src =  "images/personal_logo.png" alt = "Emilio Lugo" width="40" height="36" class="d-inline-block align-text-top">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
                             <a class="nav-link" href="/index">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/logout">Projects</a>
+                            <a class="nav-link" href="/procets">Projects</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/logout">Resume</a>
@@ -38,16 +38,22 @@
                 </div>
             </div>
         </nav>
-        <div class="container-fluid-full">
-            <div class="row dark-section align-items-center justify-content-center">
-                <div class="col text-center" style="margin-bottom: 17%;">
+        <div class="container-fluid-full sailec-bold">
+            <div class="row dark-section align-items-center justify-content-center" style=" border-top-left-radius: 0px; border-top-right-radius: 0px; background: radial-gradient(circle, #ff7e5f, #feb47b);">
+                <div class="col text-center" style="margin-bottom: 10%;">
                     <a href="#">
                         <!-- TODO Make it fade in-->
                         <img src="images/headshot.png" alt="Silhouette" id="headshot" class="img-fluid photo-silhouette">
                     </a>
-                    <h3 id = "title" style ="visibility: hidden;"> Student | Aspiring Software Engineer</h3>
-                    <h1 class="fw-semibold swipe" id="name">Emilio Lugo</h1>
-                    <h2 class="fw-semibold" id="info" style = "visibility: hidden;">Parkway West<br>St. Louis, MO</h2>
+                    <h3 class = "sailec-light"  id = "title" style ="visibility: hidden;"> Student | Aspiring Software Engineer</h3>
+                    
+                    <h1 class="swipe" id="name">Emilio Lugo</h1>
+                    <h2 class="sailec-light" id="info" style = "visibility: hidden;">Parkway West<br>St. Louis, MO</h2>
+                    <div style = "padding-top: 5%;">
+                    <button class = "sailec-light btn btn-outline-secondary" id = "proj-button" style = "visibility: hidden;" style="border-radius: 10px;"> 
+                        Check Out My Projects >
+                    </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,38 +63,64 @@
                     About Me
                 </h2>
                 <!-- TODO Make bio swipe in from the left-->
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium massa non mauris vulputate sodales. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc consectetur erat vitae justo varius gravida. Cras accumsan laoreet condimentum. Vestibulum eget est sit amet justo venenatis sagittis a vel orci. Etiam pharetra leo at felis mollis, nec ornare neque porttitor. Nulla enim magna, auctor at pharetra nec, rutrum ut dolor. Quisque scelerisque, dui sit amet sodales dictum, lacus augue imperdiet mi, sit amet egestas nunc nibh non metus. Mauris diam dui, porta id fermentum nec, accumsan vel dui. Aenean ac mauris augue. Maecenas ut auctor lacus, nec lobortis ex. In nec turpis non est luctus sagittis. Ut iaculis mi vel eros cursus, et pretium tortor vehicula.
+                <p id = "about-me-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pretium massa non mauris vulputate sodales. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc consectetur erat vitae justo varius gravida. Cras accumsan laoreet condimentum. Vestibulum eget est sit amet justo venenatis sagittis a vel orci. Etiam pharetra leo at felis mollis, nec ornare neque porttitor. Nulla enim magna, auctor at pharetra nec, rutrum ut dolor. Quisque scelerisque, dui sit amet sodales dictum, lacus augue imperdiet mi, sit amet egestas nunc nibh non metus. 
                 </p>
             </div>
-            <div class = "row dark-section">
-                <h3>Hobbies</h3>
-                <h4>Travel</h4>
-                <h4>Sports</h4>
+            <div class = "row dark-section justify-content-center align-items-center">
+                <h2>Hobbies</h2>
+                <div class = "col text-center">
+                    <h3>Travel</h3>
+                    <!--MAKE INTERACTIVE MAP-->
+                    <img id = "map" src = "images/world-map-removebg-preview.png" style = "object-fit: fill;">
+                    <div class="row text-center">
+                        <div class="col">
+                            <h4>Cities Visited</h4>
+                            <h3 class = "sailec-light travel" id = "citynum">?</h3>
+                        </div>
+                        <div class="col">
+                            <h4>Countries Lived In</h4>
+                            <h3 class = "sailec-light travel" id = "countrynum">?</h3>
+                        </div>
+                        <div class="col">
+                            <h4>Continents Visited</h4>
+                            <h3 class = "sailec-light travel" id = "contnum">?</h3>
+                        </div>
+                    </div>
+                </div>
+            <div class = "tertiary text-center grid gap-0 row-gap-3" style="border-radius: 4px;">
+                <h3>Sports</h3>
+                <div class="p-2 g-col-6">
+                    <h4><img src="images/march-madness.png" alt = "March Madness" style="max-height: 40px;"> Madman</h4>
+                    <!--TODO make image fade in-->
+                    <p>My expertise on College Basketball is second to none with finishes in the 94th percentile in the ESPN Bracket Challenge</p>
+                    <img class = "img-thumbnail" src="images/2023-mm.png" alt = "94.4 Percentile Bracket with 640 points" style="max-width: 60vw;">
+                </div>
+                <div class="p-2 g-col-6">
+                    <h4>Desde Mexico</h4>
+                    <p>I've been kicking a ball since before I was born, soccer has been a huge part of my life</p>
+                </div>
+                <div class="p-2 g-col-6">
+                    <h4>Wrong Football...</h4>
+                    <p>Feel free to invite me to any Superbowl parties!</p>
+                </div>
             </div>
+            <div style = "padding: 10px;" class = "col text-center">
+            <h3>Movies I love</h3>
+            <img class = "movie-default" src = "images/movies/dune2.jpeg" alt = "Dune Part Two">
+            <img class = "movie-default" src = "images/movies/goodfellas.jpg" alt = "Goodfellas">
+            <img class = "movie-default" src = "images/movies/taxi-driver.jpg" alt = "Taxi Driver">
+            <img class = "movie-default" src = "images/movies/theshining.jpeg" alt = "The Shining">
+            <img class = "movie-default" src = "images/movies/tpart.jpg" alt = "The Postman Always Rings Twice">
+            </div>
+
         </div>
-    <footer class = "light-section bg-light">
-        <h3>Get in touch</h3>
-        <small>emilio23lugo@gmail.com</small>
-        <small>+1 (314) - 343 - 9310</small>
+    <div class = "light-section bg-light align-items-center justify-content-center z-0">
+    <footer class = "col text-center">
+        <h3 class = "sailec-bold">Get in touch</h3>
+        <small>Cell: +1 (314) - 343 - 9310<br></small>
+        <small>Email: emilio23lugo@gmail.com</small>
     </footer>
+    </div>
     </body>
-    <script>
-        var h1Element = document.getElementById("name");
-
-// Get the position of the h1 element relative to the viewport
-var h1Position = h1Element.getBoundingClientRect();
-
-// Get the scroll position of the document
-var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-// Calculate the absolute position of the h1 element
-var absoluteLeft = h1Position.left + scrollLeft;
-var absoluteTop = h1Position.top + scrollTop;
-
-// Log the absolute position values
-console.log("Absolute Left: " + absoluteLeft);
-console.log("Absolute Top: " + absoluteTop);
-    </script>
 </html>

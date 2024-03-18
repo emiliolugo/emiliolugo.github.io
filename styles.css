@@ -1,14 +1,48 @@
 /*styles.css*/
 
+@font-face {
+    font-family: 'Sailec-Bold';
+    src: url('sailec/sailec_bold-webfont.woff2') format('woff2'),
+         url('sailec/sailec_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sailec-Light';
+    src: url('sailec/sailec_light-webfont.woff2') format('woff2'),
+         url('sailec/sailec_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    font-family: 'Sailec-Light';
 }
 
+.sailec-bold,h2,h3,h4{
+    font-family: "Sailec-Bold";
+}
+
+.sailec-light{
+    font-family: "Sailec-Light"
+}
 @keyframes fade-image{
    from{filter: grayscale(100%) brightness(0);}
    to{filter: grayscale(0%) brightness(100%);}
 }
+@keyframes fade-in{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.fade-in{
+    animation-name: fade-in;
+    animation-duration: .75s;
+    animation-fill-mode: forwards; /* Keep the final state after animation */
+}
+
 .photo-silhouette {
     filter: grayscale(100%) brightness(0);
 }
@@ -19,7 +53,7 @@ html, body {
 }
 #headshot
 {
-    margin-top: 17%;
+    margin-top: 12%;
     max-width: 400px;
     max-height: 400px;
     margin-bottom: 10px;
@@ -27,16 +61,22 @@ html, body {
 
 .light-section
 {
+    margin-top: 5px;
+    padding-top: 5%;
+    padding-bottom: 5%;
     background-color: #F8F9FA;
     width: 100vw;
     color: #212529;
-    box-shadow: 0 4px 2px -2px gray;
 }
 
 .dark-section {
-    background-color: #97caef;
+    border-radius: 6px;
+    margin-top: 2px;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
     width: 100vw;
-    color: #212529;
+    color: #F8F9FA;
     box-shadow: 0 4px 2px -2px gray;
 }
 
@@ -80,4 +120,29 @@ html, body {
     animation-name: swipe-center;
     animation-duration: 1.5s;
     animation-fill-mode: forwards; /* Keep the final state after animation */
+}
+
+#about-me-text{
+    padding-right: -30vw;
+}
+
+.tertiary{
+    border-radius: 6px;
+    margin-top: 2px;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    width: 100vw;
+    color: #F8F9FA;
+    background-color: #2B3035;
+}
+
+.movie-default
+{
+    margin-left: 2%;
+    margin-right: 2%;
+    max-height:200px;
+    border-radius: 6px;
+    border-color: #212529;
+    border-style: solid;
+    border-width: 2px;
 }
