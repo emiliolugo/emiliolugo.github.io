@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var contact = document.getElementById('contact');
             var job = document.getElementById('job-opps');
             var contactInfo = document.getElementsByClassName('contact-sources');
-            
+            var websites = document.getElementById('websites');
             
             projInfo.forEach(function(element) {
                 if (isInViewport(element)) {
@@ -101,12 +101,14 @@ document.addEventListener("DOMContentLoaded", function() {
             {
                 contact.classList.add('fade-left');
             }
+            
             if(isInViewport(contact))
             {
                 setTimeout(function(){job.classList.add('fade-right');
                 setTimeout(function(){
                     document.getElementById('connect').classList.add('fade-left');
                     setTimeout(function(){
+                        websites.classList.add('fade-right');
                         for (var i = 0; i < contactInfo.length; i++) {
                             (function(index) {
                                 setTimeout(function() {
@@ -127,6 +129,33 @@ document.addEventListener("DOMContentLoaded", function() {
         window.addEventListener('scroll', handleScroll);
     
         // Initially call the function to add swipe class to elements in viewport on page load
-        window.addEventListener('load', handleScroll);
+
+        var acc = document.getElementsByClassName("accordion");
+        
+
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                // Toggle the "active" class on the clicked element
+                this.classList.toggle("active");
+        
+                // Get the next sibling element
+                var panel = this.nextElementSibling;
+        
+                // Toggle the max-height property to expand/collapse the panel
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                    if (panel.maxHeight == null) {
+                        console.log("hello")
+                        panel.classList.remove('hovered');
+                    }
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    // Add the "hovered" class if the panel height is greater than 10 pixels
+                    if (panel.scrollHeight > 10) {
+                        panel.classList.add('hovered');
+                    }
+                }
+            });
+        }
     
 });
