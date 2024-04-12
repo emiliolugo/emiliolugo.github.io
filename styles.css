@@ -331,12 +331,11 @@ p,h1,h2,h3,h4,h5,h6
   }
 
   .squee-g{
-
+    
     align-items: center;
   }
 
   .panel-text{
-    margin-top: -15%;
     padding-bottom: 5%;
   }
 
@@ -346,6 +345,10 @@ p,h1,h2,h3,h4,h5,h6
 
   .proj-img{
     max-width: 500px;
+  }
+  .remove-crop{
+    margin-bottom: -50px;
+    max-width: 40%;
   }
 
   @media only screen and (max-width: 600px) {
@@ -383,6 +386,12 @@ p,h1,h2,h3,h4,h5,h6
     }
     .row.text-center > div > h4{
       font-size: 1rem;
+    }
+    .remove-crop{
+      max-width: 200px;
+    }
+    .panel-text{
+      font-size: .8rem;
     }
   }
 
