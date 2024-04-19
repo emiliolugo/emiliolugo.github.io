@@ -25,6 +25,9 @@ html, body {
     padding: 0;
     margin: 0;
     color: #F8F9FA;
+    background: rgb(37,37,38);
+background: linear-gradient(to bottom right, rgba(37,37,38,0.9822522759103641) 7%, rgba(61,5,162,1) 92%);
+    
     
     
 }
@@ -54,9 +57,95 @@ p,h1,h2,h3,h4,h5,h6
     animation-duration: .75s;
     animation-fill-mode: forwards; /* Keep the final state after animation */
 }
+.backgr{
+  html {
+    --s: 82px; /* control the size */
+    --c1: #b2b2b2;
+    --c2: #ffffff;
+    --c3: #d9d9d9;
+    
+    --_g: var(--c3) 0 120deg,#0000 0;
+    background:
+      conic-gradient(from -60deg at 50% calc(100%/3),var(--_g)),
+      conic-gradient(from 120deg at 50% calc(200%/3),var(--_g)),
+      conic-gradient(from  60deg at calc(200%/3),var(--c3) 60deg,var(--c2) 0 120deg,#0000 0),
+      conic-gradient(from 180deg at calc(100%/3),var(--c1) 60deg,var(--_g)),
+      linear-gradient(90deg,var(--c1)   calc(100%/6),var(--c2) 0 50%,
+                            var(--c1) 0 calc(500%/6),var(--c2) 0);
+    background-size: calc(1.732*var(--s)) var(--s);
+  }
+  
+}
+@property --gap{
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 0;
+}
+@property --angle{
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+#headshot {
+  
+    --border: 15px;
+    --gap: 12px;
+    --color: #2c1269;
+    
+    
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin: 20px;
+    cursor: pointer;
+    padding: calc(var(--border) + var(--gap));
+    
+    --angle: 90deg;
+    background:
+      radial-gradient(farthest-side,var(--color) 97%,#00000000 101%) 85.35% 85.35%,
+      conic-gradient(from calc(180deg - var(--angle)/2),#0000 var(--angle),var(--color) 0),
+      radial-gradient(farthest-side,var(--color) 97%,#0000 101%) 14.65% 85.35%;
+    background-size: var(--border) var(--border),auto;
+    background-repeat: no-repeat;
+    
+    -webkit-mask:
+      radial-gradient(farthest-side, 
+       #000  calc(99%  - calc(var(--border) + var(--gap))),
+       #0000 calc(100% - calc(var(--border) + var(--gap))) 
+             calc(99%  - var(--border)), 
+       #000  calc(100% - var(--border)));
+            mask:
+      radial-gradient(farthest-side, 
+       #000  calc(99%  - calc(var(--border) + var(--gap))),
+       #0000 calc(100% - calc(var(--border) + var(--gap))) 
+             calc(99%  - var(--border)), 
+       #000  calc(100% - var(--border)));
+    transition: --angle .4s,--gap .4s;
+  }
+  
+  
 
-.photo-silhouette {
-    filter: grayscale(100%) brightness(0);
+
+
+#headshot:hover {
+  --angle: 0deg;
+  
+}
+
+@keyframes click {
+  from {
+    --gap: 10px; /* Initial position */
+  }
+  to {
+    --gap: 5px; /* Move off the screen */
+  }
+}
+
+
+.clicked{
+  animation-name: click;
+    animation-duration: .75s;
+    animation-fill-mode: forwards;
+  
 }
 .fade-image{
     animation-name: fade-image;
@@ -216,41 +305,14 @@ p,h1,h2,h3,h4,h5,h6
     left: 5px;
   }
 
-  #first-section{
-    background: rgb(19,0,31);
-    background: linear-gradient(0deg, rgba(19,0,31,1) 0%, rgba(159,0,255,1) 100%);
-  }
-  #second-section{
-    background: rgb(63,63,63);
-    background: linear-gradient(0deg, rgba(63,63,63,1) 0%, rgba(19,0,31,1) 100%);
-    padding-bottom: 15%;
-  }
-
-  #third-section{
-    background: rgb(14,22,43);
-    background: linear-gradient(0deg, rgba(19,23,43,1) 41%, rgba(63,63,63,1) 100%);
-  }
-
-  #fourth-section{
-    background: rgb(116,79,0);
-    background: linear-gradient(0deg, rgba(116,79,0,1) 18%, rgba(19,23,43,1) 100%);
-  }
-
-  #fifth-section{
-    background: rgb(214,146,1);
-    background: linear-gradient(0deg, rgba(214,146,1,1) 18%, rgba(116,79,0,1) 100%);
-  }
+  
 
   #sixth-section{
-    background: rgb(1,187,214);
-    background: linear-gradient(0deg, rgba(1,187,214,1) 0%, rgba(214,146,0,1) 100%);
     padding-top: 5%;
     padding-bottom: 10%;
   }
 
   #seventh-section{
-    background: rgb(157,0,214);
-    background: linear-gradient(0deg, rgba(159,0,255,1) 28%, rgba(1,187,214,1) 100%);
     padding-top: 5%;
     padding-bottom: 10%;
   }
@@ -285,7 +347,10 @@ p,h1,h2,h3,h4,h5,h6
   .proj-title{
     text-align: start;
   }
-
+  #chartdiv {
+    width: 100%;
+    height: 400px;
+  }
   .accordion {
     max-width: 80%;
     color: #F8F9FA;

@@ -7,12 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
     let map = document.getElementById('map');
     let projButton = document.getElementById('proj-button');
     let resume = document.getElementById('resume');
+    
     // Add a mouseenter event listener to the image element
     headshot.addEventListener('click', function() {
         // Change the image source when hovering over the image
-
-        headshot.style.backgroundColor = "#2B3035";
-        headshot.classList.add('fade-image');
+        headshot.classList.add('clicked')
         setTimeout(function() {
             info.style.visibility = "visible";
             info.classList.add("fade-left-across");
