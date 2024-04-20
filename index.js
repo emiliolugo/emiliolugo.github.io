@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     headshot.addEventListener('click', function() {
         // Change the image source when hovering over the image
         headshot.classList.add('clicked')
+        headshot.classList.remove('pulse')
         setTimeout(function() {
             info.style.visibility = "visible";
             info.classList.add("fade-left-across");
