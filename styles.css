@@ -1,203 +1,247 @@
 /*styles.css*/
 
 @font-face {
-    font-family: 'Sailec-Bold';
-    src: url('sailec/sailec_bold-webfont.woff2') format('woff2'),
-         url('sailec/sailec_bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Sailec-Bold';
+  src: url('sailec/sailec_bold-webfont.woff2') format('woff2'),
+       url('sailec/sailec_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Sailec-Light';
-    src: url('sailec/sailec_light-webfont.woff2') format('woff2'),
-         url('sailec/sailec_light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Sailec-Light';
+  src: url('sailec/sailec_light-webfont.woff2') format('woff2'),
+       url('sailec/sailec_light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 html, body {
-    overflow-y: auto;
-    max-width: 100%;
-    overflow-x: hidden;
-    font-family: 'Sailec-Light';
-    margin: 0;
-    padding: 0;
-    margin: 0;
-    color: #F8F9FA;
-    background: rgb(37,37,38);
-background: linear-gradient(to bottom right, rgba(37,37,38,0.9822522759103641) 7%, rgba(61,5,162,1) 92%);
-    
-    
-    
+  overflow-y: auto;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Sailec-Light';
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  color: #F8F9FA;
+  background: rgb(12,22,59);
+background: linear-gradient(0deg, rgba(12,22,59,1) 0%, rgba(28,45,105,1) 100%);
+  
+  
 }
+
+
 
 p,h1,h2,h3,h4,h5,h6
 {
-    margin-right: 60px;
-    margin-left: 60px;
+  margin-right: 60px;
+  margin-left: 60px;
 }
 .sailec-bold,h2,h3,h4{
-    font-family: "Sailec-Bold";
+  font-family: "Sailec-Bold";
 }
 
+#first-section
+{
+  margin: -1%;
+  --s: 194px; /* control the size */
+  --c1: #132156;
+  --c2: #0C163B;
+  
+  --_l:#0000 calc(25%/3),var(--c1) 0 25%,#0000 0;
+  --_g:conic-gradient(from 120deg at 50% 87.5%,var(--c1) 120deg,#0000 0);
+  background:
+    var(--_g),var(--_g) 0 calc(var(--s)/2),
+    conic-gradient(from 180deg at 75%,var(--c2) 60deg,#0000 0),
+    conic-gradient(from 60deg at 75% 75%,var(--c1) 0 60deg,#0000 0),
+    linear-gradient(150deg,var(--_l)) 0 calc(var(--s)/2),
+    conic-gradient(at 25% 25%,#0000 50%,var(--c2) 0 240deg,var(--c1) 0 300deg,var(--c2) 0),
+    linear-gradient(-150deg,var(--_l)) #1c2d69 /* third color here */;
+  background-size: calc(0.866*var(--s)) var(--s);
+  box-shadow: 0 1em 1em -1em rgba(0, 0, 0, .25);
+
+}
+
+#second-section{
+  padding-top: 10%;
+  padding-bottom: 8%;
+}
+.flexer{
+  display: flex;
+}
+hr{
+  border-bottom: 3px solid white;
+  width: 15%;
+  align-self: center;
+  border-radius: 6px;
+
+
+}
+
+#larger{
+  width: 85%;
+}
+
+
+
 .sailec-light{
-    font-family: "Sailec-Light"
+  font-family: "Sailec-Light"
 }
 @keyframes fade-image{
-   from{filter: grayscale(100%) brightness(0);}
-   to{filter: grayscale(0%) brightness(100%);}
+ from{filter: grayscale(100%) brightness(0);}
+ to{filter: grayscale(0%) brightness(100%);}
 }
 @keyframes fade-in{
-    from{opacity: 0;}
-    to{opacity: 1;}
+  from{opacity: 0;}
+  to{opacity: 1;}
 }
 .fade-in{
-    animation-name: fade-in;
-    animation-duration: .75s;
-    animation-fill-mode: forwards; /* Keep the final state after animation */
+  animation-name: fade-in;
+  animation-duration: .75s;
+  animation-fill-mode: forwards; /* Keep the final state after animation */
 }
 .backgr{
-  html {
-    --s: 82px; /* control the size */
-    --c1: #b2b2b2;
-    --c2: #ffffff;
-    --c3: #d9d9d9;
-    
-    --_g: var(--c3) 0 120deg,#0000 0;
-    background:
-      conic-gradient(from -60deg at 50% calc(100%/3),var(--_g)),
-      conic-gradient(from 120deg at 50% calc(200%/3),var(--_g)),
-      conic-gradient(from  60deg at calc(200%/3),var(--c3) 60deg,var(--c2) 0 120deg,#0000 0),
-      conic-gradient(from 180deg at calc(100%/3),var(--c1) 60deg,var(--_g)),
-      linear-gradient(90deg,var(--c1)   calc(100%/6),var(--c2) 0 50%,
-                            var(--c1) 0 calc(500%/6),var(--c2) 0);
-    background-size: calc(1.732*var(--s)) var(--s);
-  }
+html {
+  --s: 82px; /* control the size */
+  --c1: #b2b2b2;
+  --c2: #ffffff;
+  --c3: #d9d9d9;
   
+  --_g: var(--c3) 0 120deg,#0000 0;
+  background:
+    conic-gradient(from -60deg at 50% calc(100%/3),var(--_g)),
+    conic-gradient(from 120deg at 50% calc(200%/3),var(--_g)),
+    conic-gradient(from  60deg at calc(200%/3),var(--c3) 60deg,var(--c2) 0 120deg,#0000 0),
+    conic-gradient(from 180deg at calc(100%/3),var(--c1) 60deg,var(--_g)),
+    linear-gradient(90deg,var(--c1)   calc(100%/6),var(--c2) 0 50%,
+                          var(--c1) 0 calc(500%/6),var(--c2) 0);
+  background-size: calc(1.732*var(--s)) var(--s);
+}
+
 }
 @property --gap{
-  syntax: '<length>';
-  inherits: true;
-  initial-value: 0;
+syntax: '<length>';
+inherits: true;
+initial-value: 0;
 }
 @property --angle{
-  syntax: '<angle>';
-  inherits: true;
-  initial-value: 0deg;
+syntax: '<angle>';
+inherits: true;
+initial-value: 0deg;
 }
 #headshot {
-  
-    --border: 15px;
-    --gap: 12px;
-    --color: #2c1269;
-    
-    
-    box-sizing: border-box;
-    border-radius: 50%;
-    margin: 20px;
-    cursor: pointer;
-    padding: calc(var(--border) + var(--gap));
-    
-    --angle: 90deg;
-    background:
-      radial-gradient(farthest-side,var(--color) 97%,#00000000 101%) 85.35% 85.35%,
-      conic-gradient(from calc(180deg - var(--angle)/2),#0000 var(--angle),var(--color) 0),
-      radial-gradient(farthest-side,var(--color) 97%,#0000 101%) 14.65% 85.35%;
-    background-size: var(--border) var(--border),auto;
-    background-repeat: no-repeat;
-    
-    -webkit-mask:
-      radial-gradient(farthest-side, 
-       #000  calc(99%  - calc(var(--border) + var(--gap))),
-       #0000 calc(100% - calc(var(--border) + var(--gap))) 
-             calc(99%  - var(--border)), 
-       #000  calc(100% - var(--border)));
-            mask:
-      radial-gradient(farthest-side, 
-       #000  calc(99%  - calc(var(--border) + var(--gap))),
-       #0000 calc(100% - calc(var(--border) + var(--gap))) 
-             calc(99%  - var(--border)), 
-       #000  calc(100% - var(--border)));
-    transition: --angle .4s,--gap .4s;
-  }
+
+  --border: 15px;
+  --gap: 12px;
+  --color: #0C163B;
   
   
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin: 20px;
+  cursor: pointer;
+  padding: calc(var(--border) + var(--gap));
+  
+  --angle: 90deg;
+  background:
+    radial-gradient(farthest-side,var(--color) 97%,#00000000 101%) 85.35% 85.35%,
+    conic-gradient(from calc(180deg - var(--angle)/2),#0000 var(--angle),var(--color) 0),
+    radial-gradient(farthest-side,var(--color) 97%,#0000 101%) 14.65% 85.35%;
+  background-size: var(--border) var(--border),auto;
+  background-repeat: no-repeat;
+  
+  -webkit-mask:
+    radial-gradient(farthest-side, 
+     #000  calc(99%  - calc(var(--border) + var(--gap))),
+     #0000 calc(100% - calc(var(--border) + var(--gap))) 
+           calc(99%  - var(--border)), 
+     #000  calc(100% - var(--border)));
+          mask:
+    radial-gradient(farthest-side, 
+     #000  calc(99%  - calc(var(--border) + var(--gap))),
+     #0000 calc(100% - calc(var(--border) + var(--gap))) 
+           calc(99%  - var(--border)), 
+     #000  calc(100% - var(--border)));
+  transition: --angle .4s,--gap .4s;
+}
+
+
 
 
 
 #headshot:hover {
-  --angle: 0deg;
-  
+--angle: 0deg;
+
 }
 
 @keyframes click {
-  from {
-    --gap: 10px; /* Initial position */
-  }
-  to {
-    --gap: 5px; /* Move off the screen */
-  }
+from {
+  --gap: 10px; /* Initial position */
+}
+to {
+  --gap: 5px; /* Move off the screen */
+}
 }
 
 
 .clicked{
-  animation-name: click;
-    animation-duration: .75s;
-    animation-fill-mode: forwards;
-  
+animation-name: click;
+  animation-duration: .75s;
+  animation-fill-mode: forwards;
+
 }
 .fade-image{
-    animation-name: fade-image;
-    animation-duration: .75s;
-    animation-fill-mode: forwards; /* Keep the final state after animation */
+  animation-name: fade-image;
+  animation-duration: .75s;
+  animation-fill-mode: forwards; /* Keep the final state after animation */
 }
 #headshot
 {
-    margin-top: 12%;
-    max-width: 400px;
-    max-height: 400px;
-    margin-bottom: 10px;
+  margin-top: 12%;
+  max-width: 400px;
+  max-height: 400px;
+  margin-bottom: 10px;
 }
 
 
 @keyframes swipe {
-    from {
-        transform: translateX(0); /* Initial position */
-    }
-    to {
-        transform: translateX(70vw); /* Move off the screen */
-    }
+  from {
+      transform: translateX(0); /* Initial position */
+  }
+  to {
+      transform: translateX(70vw); /* Move off the screen */
+  }
 }
 
 @keyframes swipe-center {
-    from {
-        transform: translateX(-40); /* Initial position - Center of the screen */
-    }
-    to {
-        transform: translateX(0); /* Final position - Center of the screen */
-    }
+  from {
+      transform: translateX(-40); /* Initial position - Center of the screen */
+  }
+  to {
+      transform: translateX(0); /* Final position - Center of the screen */
+  }
 }
 
 
 #info{
-    animation-duration: 2s;
-    
+  animation-duration: 2s;
+  
 }
 
 .swipe{
-    animation-name: swipe;
-    animation-duration: 3s;
-    animation-fill-mode: forwards; /* Keep the final state after animation */
+  animation-name: swipe;
+  animation-duration: 3s;
+  animation-fill-mode: forwards; /* Keep the final state after animation */
 }
 .swipe-center{
-    animation-name: swipe-center;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards; /* Keep the final state after animation */
+  animation-name: swipe-center;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards; /* Keep the final state after animation */
 }
 
 #about-me-text{
-    padding-right: -30vw;
+  padding-right: -30vw;
 }
 
 
@@ -205,258 +249,265 @@ p,h1,h2,h3,h4,h5,h6
 
 .movie-default
 {
-    margin-left: 2%;
-    margin-right: 2%;
-    max-height:200px;
-    border-radius: 6px;
-    border-color: #212529;
-    border-style: solid;
-    border-width: 2px;
+  margin-left: 2%;
+  margin-right: 2%;
+  max-height:200px;
+  border-radius: 6px;
+  border-color: #212529;
+  border-style: solid;
+  border-width: 2px;
 }
 
 
 
 .proj-text
 {
-    padding-right: 20%;
-    padding-left: 20%;
-    opacity: 0;
+  padding-right: 20%;
+  padding-left: 20%;
+  opacity: 0;
 }
 
 @keyframes fadeInLeft {
-    0% {
-       opacity: 0;
-       transform: translateX(-60px);
-    }
-    100% {
-       opacity: 1;
-       transform: translateX(0);
-    }
- }
+  0% {
+     opacity: 0;
+     transform: translateX(-60px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+}
 
- @keyframes fadeInRight {
-    0% {
-       opacity: 0;
-       transform: translateX(60px);
-    }
-    100% {
-       opacity: 1;
-       transform: translateX(0);
-    }
- }
+@keyframes fadeInRight {
+  0% {
+     opacity: 0;
+     transform: translateX(60px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+}
 
- @keyframes fadeInAcross {
-    0% {
-       opacity: 0;
-       transform: translateX(-60px);
-    }
-    100% {
-       opacity: 1;
-       transform: translateX(0);
-    }
- }
+@keyframes fadeInAcross {
+  0% {
+     opacity: 0;
+     transform: translateX(-60px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+}
 
- @keyframes fadeInUp {
-    0% {
-       opacity: 0;
-       transform: translateY(40px);
-    }
-    100% {
-       opacity: 1;
-       transform: translateY(0);
-    }
- }
+@keyframes fadeInUp {
+  0% {
+     opacity: 0;
+     transform: translateY(40px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
 
- .fade-up{
-    animation-name: fadeInUp;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards; /* Keep the final state after animation */
- }
- .fade-right{
-    animation-name: fadeInRight;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards; /* Keep the final state after animation */
+.fade-up{
+  animation-name: fadeInUp;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards; /* Keep the final state after animation */
+}
+.fade-right{
+  animation-name: fadeInRight;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards; /* Keep the final state after animation */
 
- }
- .fade-left{
-    animation-name: fadeInLeft;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards; /* Keep the final state after animation */
+}
+.fade-left{
+  animation-name: fadeInLeft;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards; /* Keep the final state after animation */
 }
 
 .fade-left-across{
-    animation-name: fadeInAcross;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards; /* Keep the final state after animation */
+  animation-name: fadeInAcross;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards; /* Keep the final state after animation */
 }
 
 .zoom {
-    transition: transform 0.3s ease; /* Smooth transition for the transform property */
+  transition: transform 0.3s ease; /* Smooth transition for the transform property */
 }
 
 .zoom:hover {
-    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 
-  .contact-info
-  {
-    position: fixed;
-    bottom: 15px;
-    left: 5px;
-  }
+.contact-info
+{
+  position: fixed;
+  bottom: 15px;
+  left: 5px;
+}
 
+
+
+#sixth-section{
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+#seventh-section{
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+#contact{
+  opacity: 0;
+}
+
+#connect{
+  opacity: 0;
+}
+
+#job-opps{
+  opacity: 0;
+}
+
+.contact-sources{
+  opacity: 0;
+  text-decoration: none;
+  color: #F8F9FA;
+  margin-right: -5%;
+}
+
+#hobbies{
+  opacity: 0;
+  text-align: end;
+}
+
+#map{
+  max-width: 100%;
+}
+.proj-title{
+  text-align: start;
+}
+#chartdiv {
+  width: 100%;
+  height: 400px;
+}
+.accordion {
+  max-width: 80%;
+  color: #F8F9FA;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: none;
   
+}
+.movies{
+  padding: 10px;
+  padding-top: 10%;
+}
+.active, .accordion:hover {
+  background-color: #0D6EFD;
+  opacity: .5;
+  border: 1px solid #0D6EFD;
+}
 
-  #sixth-section{
-    padding-top: 5%;
-    padding-bottom: 10%;
+.panel {
+  max-width: 80%;
+  text-align: center;
+  margin: auto;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-top: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.panel.hovered{
+  border-left: 1px solid rgba(13, 110, 253, .5);
+  border-right: 1px solid rgba(13, 110, 253, .5);
+  border-bottom: 1px solid rgba(13, 110, 253, .5);
+}
+
+.squee-g{
+  
+  align-items: center;
+}
+
+.panel-text{
+  padding-bottom: 5%;
+}
+
+#websites{
+  opacity: 0;
+}
+
+.proj-img{
+  max-width: 500px;
+}
+.remove-crop{
+  margin-bottom: -50px;
+  max-width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+  .proj-text{
+    padding-right: 5%;
+  padding-left: 5%;
+  font-size: 12px;
   }
 
-  #seventh-section{
-    padding-top: 5%;
-    padding-bottom: 10%;
+  .movie-default{
+    max-height:150px;
+    margin-bottom: 20px;
   }
 
-  #contact{
-    opacity: 0;
-  }
-
-  #connect{
-    opacity: 0;
-  }
-
-  #job-opps{
-    opacity: 0;
-  }
-
-  .contact-sources{
-    opacity: 0;
-    text-decoration: none;
-    color: #F8F9FA;
-    margin-right: -5%;
-  }
-
-  #hobbies{
-    opacity: 0;
-    text-align: end;
-  }
-
-  #map{
-    max-width: 100%;
+  .movies{
+    padding-bottom: 20px;
   }
   .proj-title{
-    text-align: start;
-  }
-  #chartdiv {
-    width: 100%;
-    height: 400px;
-  }
-  .accordion {
-    max-width: 80%;
-    color: #F8F9FA;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    margin: auto;
     text-align: center;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-    border-radius: 20px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border: none;
-    
   }
-
-  .active, .accordion:hover {
-    background-color: #0D6EFD;
-    opacity: .5;
-    border: 1px solid #0D6EFD;
-  }
-  
-  .panel {
-    max-width: 80%;
-    text-align: center;
-    margin: auto;
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    border-top: none;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    margin-bottom: 10px;
-  }
-
-  .panel.hovered{
-    border-left: 1px solid rgba(13, 110, 253, .5);
-    border-right: 1px solid rgba(13, 110, 253, .5);
-    border-bottom: 1px solid rgba(13, 110, 253, .5);
-  }
-
-  .squee-g{
-    
-    align-items: center;
-  }
-
-  .panel-text{
-    padding-bottom: 5%;
-  }
-
-  #websites{
-    opacity: 0;
-  }
-
   .proj-img{
-    max-width: 500px;
+    max-width: 300px;
+  }
+  .contact-headings{
+    font-size: 1.2rem;
+  }
+  .contact-subtext{
+    font-size: 13px;
+  }
+  #hobbies{
+    text-align: center;
+  }
+  #map{
+    max-width: 70%;
+  }
+  .row.text-center > div > h4{
+    font-size: 1rem;
   }
   .remove-crop{
-    margin-bottom: -50px;
-    max-width: 40%;
+    max-width: 200px;
   }
-
-  @media only screen and (max-width: 600px) {
-    .proj-text{
-      padding-right: 5%;
-    padding-left: 5%;
-    font-size: 12px;
-    }
-
-    .movie-default{
-      max-height:150px;
-      margin-bottom: 20px;
-    }
-
-    .movies{
-      padding-bottom: 20px;
-    }
-    .proj-title{
-      text-align: center;
-    }
-    .proj-img{
-      max-width: 300px;
-    }
-    .contact-headings{
-      font-size: 1.2rem;
-    }
-    .contact-subtext{
-      font-size: 13px;
-    }
-    #hobbies{
-      text-align: center;
-    }
-    #map{
-      max-width: 70%;
-    }
-    .row.text-center > div > h4{
-      font-size: 1rem;
-    }
-    .remove-crop{
-      max-width: 200px;
-    }
-    .panel-text{
-      font-size: .8rem;
-    }
+  .panel-text{
+    font-size: .8rem;
   }
+  hr
+  {
+    display: none;
+  }
+}
 
