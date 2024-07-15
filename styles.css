@@ -460,6 +460,11 @@ animation-name: click;
 .proj-img{
   max-width: 500px;
 }
+.coming-soon
+{
+  border-color: #FD0805;
+  border-width: 3px
+}
 .remove-crop{
   margin-bottom: -50px;
   max-width: 40%;
